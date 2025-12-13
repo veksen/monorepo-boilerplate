@@ -1,11 +1,11 @@
 {
   "name": "@repo/ui",
   "version": "0.0.0",
-  "type": "module",
   "license": "MIT",
   "sideEffects": [
     "**/*.css"
   ],
+  "type": "module",
   "exports": {
     "./styles.css": "./dist/index.css",
     "./*": "./dist/*.js"
@@ -21,6 +21,9 @@
     "dev:styles": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
     "lint": "eslint src --max-warnings 0",
     "test": "vitest run"
+  },
+  "dependencies": {
+    "@base-ui/react": "^1.0.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",

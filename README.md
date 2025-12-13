@@ -7,7 +7,7 @@ This Turborepo includes the following packages/apps:
 ### Apps and Packages
 
 - `app`: a [Vite](https://vite.dev/) + React app with [Tailwind CSS](https://tailwindcss.com/)
-- `@repo/ui`: a React component library with [Tailwind CSS](https://tailwindcss.com/) shared by apps
+- `@repo/ui`: a React component library with [Base UI](https://base-ui.com/) and [Tailwind CSS](https://tailwindcss.com/) shared by apps
 - `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-prettier`)
 - `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
 - `@repo/tailwind-config`: shared Tailwind CSS configuration
@@ -42,6 +42,7 @@ If you choose this strategy, you can remove the `tailwindcss` and `autoprefixer`
 
 This Turborepo has some additional tools already setup for you:
 
+- [Base UI](https://base-ui.com/) for unstyled, accessible components
 - [Tailwind CSS](https://tailwindcss.com/) for styles
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [ESLint](https://eslint.org/) for code linting
