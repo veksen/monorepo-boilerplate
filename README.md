@@ -21,7 +21,6 @@ This example is set up to produce compiled styles for `ui` components into the `
 
 - Make sharing one `tailwind.config.ts` to apps and packages as easy as possible.
 - Make package compilation simple by only depending on `tsc` and `tailwindcss`.
-- Ensure Tailwind classes do not overwrite each other. The `ui` package uses a `ui:` prefix for its classes.
 - Maintain clear package export boundaries.
 
 Another option is to consume `packages/ui` directly from source without building. If using this option, you will need to update the `tailwind.config.ts` in your apps to be aware of your package locations, so it can find all usages of the `tailwindcss` class names for CSS compilation.
