@@ -1,4 +1,8 @@
 import { useState } from 'react'
+import { Button } from "@repo/ui/button"
+import { Dialog } from "@repo/ui/dialog"
+import { Field } from "@repo/ui/field"
+import { Input } from "@repo/ui/input"
 import { Card } from "@repo/ui/card"
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -42,13 +46,29 @@ function App() {
 
       <h1 className="text-5xl font-bold mb-8">Vite + React</h1>
 
-      <div className="p-8 mb-8">
-        <button
-          onClick={() => setCount((count) => count + 1)}
-          className="rounded-lg border border-transparent px-5 py-4 text-base font-medium bg-neutral-900 cursor-pointer transition-colors hover:border-purple-500"
-        >
+      <div className="p-8 mb-8 flex flex-col items-center gap-4">
+        <Button onClick={() => setCount((count) => count + 1)}>
           count is {count}
-        </button>
+        </Button>
+
+        <Dialog.Root>
+          <Dialog.Trigger>Open Dialog</Dialog.Trigger>
+          <Dialog.Portal>
+            <Dialog.Backdrop />
+            <Dialog.Popup>
+              <Dialog.Title>Example Dialog</Dialog.Title>
+              <Dialog.Description>
+                This is a Base UI dialog component.
+              </Dialog.Description>
+              <Field.Root>
+                <Field.Label>Name</Field.Label>
+                <Input placeholder="Enter your name" />
+              </Field.Root>
+              <Dialog.Close>Close</Dialog.Close>
+            </Dialog.Popup>
+          </Dialog.Portal>
+        </Dialog.Root>
+
         <p className="mt-4 text-neutral-400">
           Edit <code className="font-mono bg-neutral-800 px-2 py-1 rounded">src/App.tsx</code> and save to test HMR
         </p>

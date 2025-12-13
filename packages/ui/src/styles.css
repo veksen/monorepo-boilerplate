@@ -1,3 +1,13 @@
 /* Component-level styles for the UI package */
 @import "tailwindcss";
 @import "@repo/tailwind-config";
+
+/* Base UI portal isolation */
+#root {
+  isolation: isolate;
+}
+
+/* iOS Safari 26+ compatibility for Base UI backdrops */
+body {
+  position: relative;
+}
