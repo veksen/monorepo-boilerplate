@@ -1,9 +1,11 @@
 export const sharedConfig = {
   test: {
     coverage: {
-      provider: "istanbul" as const,
-      reporter: ["json"],
+      provider: "v8" as const,
+      reporter: ["text", "lcov"],
       reportsDirectory: "./coverage",
+      include: ["src/**/*.{ts,tsx}"],
+      exclude: ["src/**/*.test.{ts,tsx}"],
     },
     globals: true,
   },
