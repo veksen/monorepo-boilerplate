@@ -72,6 +72,9 @@ jobs:
     needs: ci
     if: needs.ci.outputs.packages != '[]'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
     strategy:
       matrix:
         package: ${{ fromJson(needs.ci.outputs.packages) }}
