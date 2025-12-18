@@ -1,6 +1,3 @@
 import { viteReactConfig } from "@repo/eslint-config/vite-react";
 
-export default [
-  { ignores: ["dist"] },
-  ...viteReactConfig,
-];
+export default [{ ignores: ["dist"] }, ...viteReactConfig];

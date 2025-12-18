@@ -1,11 +1,11 @@
-import { useState } from 'react'
-import { Button } from "@repo/ui/button"
-import { Dialog } from "@repo/ui/dialog"
-import { Field } from "@repo/ui/field"
-import { Input } from "@repo/ui/input"
-import { Card } from "@repo/ui/card"
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState } from "react";
+import { Button } from "@repo/ui/button";
+import { Dialog } from "@repo/ui/dialog";
+import { Field } from "@repo/ui/field";
+import { Input } from "@repo/ui/input";
+import { Card } from "@repo/ui/card";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
 
 const LINKS = [
   {
@@ -26,21 +26,30 @@ const LINKS = [
   {
     title: "Deploy",
     href: "https://vercel.com/new",
-    description: "Instantly deploy your Turborepo to a shareable URL with Vercel.",
+    description:
+      "Instantly deploy your Turborepo to a shareable URL with Vercel.",
   },
 ];
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-8">
       <div className="flex gap-8 mb-8">
         <a href="https://vite.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="h-24 p-6 transition-all hover:drop-shadow-[0_0_2em_#646cffaa]" alt="Vite logo" />
+          <img
+            src={viteLogo}
+            className="h-24 p-6 transition-all hover:drop-shadow-[0_0_2em_#646cffaa]"
+            alt="Vite logo"
+          />
         </a>
         <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="h-24 p-6 transition-all hover:drop-shadow-[0_0_2em_#61dafbaa]" alt="React logo" />
+          <img
+            src={reactLogo}
+            className="h-24 p-6 transition-all hover:drop-shadow-[0_0_2em_#61dafbaa]"
+            alt="React logo"
+          />
         </a>
       </div>
 
@@ -70,7 +79,11 @@ function App() {
         </Dialog.Root>
 
         <p className="mt-4 text-neutral-400">
-          Edit <code className="font-mono bg-neutral-800 px-2 py-1 rounded">src/App.tsx</code> and save to test HMR
+          Edit{" "}
+          <code className="font-mono bg-neutral-800 px-2 py-1 rounded">
+            src/App.tsx
+          </code>{" "}
+          and save to test HMR
         </p>
       </div>
 
@@ -82,7 +95,7 @@ function App() {
         ))}
       </div>
     </main>
-  )
+  );
 }
 
-export default App
+export default App;
