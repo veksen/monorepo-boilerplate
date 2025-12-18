@@ -9,6 +9,8 @@ on:
 jobs:
   ci:
     runs-on: ubuntu-latest
+    outputs:
+      packages: ${{ steps.find-packages.outputs.packages }}
     steps:
       - uses: actions/checkout@v4
 
@@ -23,4 +25,78 @@ jobs:
 
       - run: npm run lint
 
-      - run: npm run test
+      - run: npm run test:coverage
+
+      # Find packages with coverage
+      - name: Find packages with coverage
+        id: find-packages
+        run: |
+          packages=$(find packages apps -name "coverage-summary.json" -path "*/coverage/*" 2>/dev/null | \
+            sed 's|/coverage/coverage-summary.json||' | \
+            jq -R -s -c 'split("\n") | map(select(length > 0))')
+          echo "packages=$packages" >> $GITHUB_OUTPUT
+
+      # Upload coverage for report job
+      - name: Upload coverage for report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-current
+          path: |
+            packages/*/coverage/
+            apps/*/coverage/
+          retention-days: 1
+
+      # Upload coverage summary for baseline comparison on main
+      - name: Upload baseline coverage
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-main
+          path: |
+            packages/*/coverage/coverage-summary.json
+            apps/*/coverage/coverage-summary.json
+          retention-days: 30
+
+      # Download baseline for PR
+      - name: Download baseline coverage
+        if: github.event_name == 'pull_request'
+        uses: dawidd6/action-download-artifact@v6
+        with:
+          name: coverage-main
+          path: coverage-baseline
+          workflow_conclusion: success
+          branch: main
+          if_no_artifact_found: warn
+
+  coverage-report:
+    needs: ci
+    if: needs.ci.outputs.packages != '[]'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        package: ${{ fromJson(needs.ci.outputs.packages) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download coverage
+        uses: actions/download-artifact@v4
+        with:
+          name: coverage-current
+
+      - name: Download baseline
+        uses: dawidd6/action-download-artifact@v6
+        if: github.event_name == 'pull_request'
+        with:
+          name: coverage-main
+          path: coverage-baseline
+          workflow_conclusion: success
+          branch: main
+          if_no_artifact_found: warn
+
+      - name: Coverage Report
+        uses: davelosert/vitest-coverage-report-action@v2
+        with:
+          name: ${{ matrix.package }}
+          working-directory: ${{ matrix.package }}
+          json-summary-compare-path: ${{ github.event_name == 'pull_request' && format('../../coverage-baseline/{0}/coverage/coverage-summary.json', matrix.package) || '' }}
+          file-coverage-mode: changes-affected

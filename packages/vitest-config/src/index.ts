@@ -2,7 +2,7 @@ export const sharedConfig = {
   test: {
     coverage: {
       provider: "v8" as const,
-      reporter: ["text", "lcov"],
+      reporter: ["text", "lcov", "json-summary", "json"],
       reportsDirectory: "./coverage",
       include: ["src/**/*.{ts,tsx}"],
       exclude: ["src/**/*.test.{ts,tsx}"],
