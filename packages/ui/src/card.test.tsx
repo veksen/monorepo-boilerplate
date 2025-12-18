@@ -11,7 +11,7 @@ describe("Card", () => {
     render(
       <Card title="Test Title" href="https://example.com">
         Test content
-      </Card>
+      </Card>,
     );
 
     expect(screen.getByText("Test Title")).toBeDefined();
@@ -22,7 +22,7 @@ describe("Card", () => {
     render(
       <Card title="Test" href="https://example.com">
         Content
-      </Card>
+      </Card>,
     );
 
     const link = screen.getByRole("link");
