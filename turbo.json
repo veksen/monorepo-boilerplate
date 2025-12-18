@@ -19,6 +19,10 @@
     },
     "test": {
       "dependsOn": ["@repo/vitest-config#build"]
+    },
+    "test:coverage": {
+      "dependsOn": ["@repo/vitest-config#build"],
+      "outputs": ["coverage/**"]
     }
   }
 }
