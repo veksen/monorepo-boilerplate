@@ -1,6 +1,6 @@
 import { Button as BaseButton } from "@base-ui/react/button";
 import { type ComponentProps } from "react";
-import { cn } from "./utils.js";
+import { cn } from "../utils.js";
 
 type ButtonProps = ComponentProps<typeof BaseButton>;
 

@@ -8,7 +8,7 @@
   "type": "module",
   "exports": {
     "./styles.css": "./dist/index.css",
-    "./*": "./dist/*.js"
+    "./*": "./dist/*/index.js"
   },
   "files": [
     "dist"

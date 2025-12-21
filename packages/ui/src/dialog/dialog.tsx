@@ -1,6 +1,6 @@
 import { Dialog as BaseDialog } from "@base-ui/react/dialog";
 import { type ComponentProps } from "react";
-import { cn } from "./utils.js";
+import { cn } from "../utils.js";
 
 type TriggerProps = ComponentProps<typeof BaseDialog.Trigger>;
 type BackdropProps = ComponentProps<typeof BaseDialog.Backdrop>;
