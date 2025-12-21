@@ -14,7 +14,7 @@
     "test:coverage": "turbo run test:coverage"
   },
   "devDependencies": {
-    "turbo": "^2.6.3"
+    "turbo": "^2.7.1"
   },
   "packageManager": "npm@11.6.0",
   "engines": {
