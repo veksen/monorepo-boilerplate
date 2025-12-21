@@ -1,14 +1,12 @@
 import { type ReactNode } from "react";
 
-export function Card({
-  title,
-  children,
-  href,
-}: {
+type CardProps = {
   title: string;
   children: ReactNode;
   href: string;
-}) {
+};
+
+export function Card({ title, children, href }: CardProps) {
   return (
     <a
       className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-neutral-700 hover:bg-neutral-800/30"
