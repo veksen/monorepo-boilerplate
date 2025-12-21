@@ -20,7 +20,7 @@
     "@tanstack/react-router": "^1.141.8",
     "@tanstack/react-router-devtools": "^1.141.8",
     "react": "^19.2.3",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.3"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
