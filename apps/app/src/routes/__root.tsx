@@ -21,6 +21,12 @@ function RootComponent() {
         >
           About
         </Link>
+        <Link
+          to="/components"
+          className="text-neutral-400 hover:text-white [&.active]:text-white [&.active]:font-bold"
+        >
+          Components
+        </Link>
       </nav>
       <Outlet />
       <TanStackRouterDevtools position="bottom-right" />

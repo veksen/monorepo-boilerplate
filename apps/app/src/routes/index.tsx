@@ -65,34 +65,6 @@ export function HomeComponent() {
           count is {count}
         </Button>
 
-        <div className="flex flex-wrap gap-2">
-          <Button variant="primary" size="sm">
-            Primary SM
-          </Button>
-          <Button variant="primary">Primary MD</Button>
-          <Button variant="primary" size="lg">
-            Primary LG
-          </Button>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          <Button variant="secondary" size="sm">
-            Secondary SM
-          </Button>
-          <Button variant="secondary">Secondary MD</Button>
-          <Button variant="secondary" size="lg">
-            Secondary LG
-          </Button>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          <Button variant="ghost" size="sm">
-            Ghost SM
-          </Button>
-          <Button variant="ghost">Ghost MD</Button>
-          <Button variant="ghost" size="lg">
-            Ghost LG
-          </Button>
-        </div>
-
         <Dialog.Root>
           <Dialog.Trigger>Open Dialog</Dialog.Trigger>
           <Dialog.Portal>
