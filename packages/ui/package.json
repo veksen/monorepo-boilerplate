@@ -2,24 +2,25 @@
   "name": "@repo/ui",
   "version": "0.0.0",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
   "sideEffects": [
     "**/*.css"
   ],
-  "type": "module",
   "exports": {
     "./styles.css": "./dist/index.css",
     "./*": "./dist/*/index.js"
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build:components": "tsc",
     "build:styles": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
     "check-types": "tsc --noEmit",
     "dev:components": "tsc --watch",
     "dev:styles": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
-    "lint": "eslint src --max-warnings 0",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage"
   },
@@ -28,7 +29,6 @@
     "cva": "^1.0.0-beta.4"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
     "@repo/tailwind-config": "*",
     "@repo/typescript-config": "*",
     "@repo/vitest-config": "*",
@@ -38,7 +38,6 @@
     "@types/react": "^19.2.7",
     "@vitest/coverage-v8": "^4.0.16",
     "clsx": "^2.1.1",
-    "eslint": "^9.39.2",
     "jsdom": "^27.3.0",
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.18",

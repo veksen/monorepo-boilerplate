@@ -1,0 +1,6 @@
+{
+  "extends": ["../../oxlint.json"],
+  "jsPlugins": [
+    { "name": "tanstack-router", "specifier": "@tanstack/eslint-plugin-router" }
+  ]
+}

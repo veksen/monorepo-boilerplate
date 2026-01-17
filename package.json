@@ -9,16 +9,22 @@
     "build": "turbo run build",
     "check-types": "turbo run check-types",
     "dev": "turbo run dev",
-    "lint": "turbo run lint",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
     "test": "turbo run test",
     "test:coverage": "turbo run test:coverage"
   },
   "devDependencies": {
+    "eslint-plugin-turbo": "^2.7.1",
+    "oxfmt": "^0.24.0",
+    "oxlint": "^1.38.0",
     "turbo": "^2.7.1"
   },
-  "packageManager": "npm@10.9.4",
   "engines": {
     "node": ">=22",
     "npm": ">=10.9"
-  }
+  },
+  "packageManager": "npm@10.9.4"
 }

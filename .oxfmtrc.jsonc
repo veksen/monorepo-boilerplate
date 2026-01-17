@@ -1,0 +1,23 @@
+{
+  "ignorePatterns": ["**/routeTree.gen.ts"],
+  "printWidth": 80,
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "useTabs": false,
+  "experimentalTailwindcss": {
+    "attributes": ["class", "className"],
+    "functions": ["clsx", "cn", "tailwind-merge"],
+  },
+  "experimentalSortImports": {
+    "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+    "internalPattern": ["@repo/", "@/", "~/"],
+    "newlinesBetween": false,
+    "order": "asc",
+    "ignoreCase": true,
+  },
+}
