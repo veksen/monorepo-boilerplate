@@ -13,7 +13,7 @@ function Trigger({ className = "", ...props }: TriggerProps) {
   return (
     <BaseDialog.Trigger
       className={cn(
-        "rounded-lg border border-transparent px-5 py-4 text-base font-medium bg-neutral-800 cursor-pointer transition-colors hover:border-purple-500",
+        "cursor-pointer rounded-lg border border-transparent bg-neutral-800 px-5 py-4 text-base font-medium transition-colors hover:border-purple-500",
         className,
       )}
       {...props}
@@ -34,7 +34,7 @@ function Popup({ className = "", ...props }: PopupProps) {
   return (
     <BaseDialog.Popup
       className={cn(
-        "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-neutral-900 p-6 rounded-lg shadow-xl min-w-80",
+        "fixed top-1/2 left-1/2 min-w-80 -translate-x-1/2 -translate-y-1/2 rounded-lg bg-neutral-900 p-6 shadow-xl",
         className,
       )}
       {...props}
@@ -45,7 +45,7 @@ function Popup({ className = "", ...props }: PopupProps) {
 function Title({ className = "", ...props }: TitleProps) {
   return (
     <BaseDialog.Title
-      className={cn("text-xl font-semibold mb-4", className)}
+      className={cn("mb-4 text-xl font-semibold", className)}
       {...props}
     />
   );
@@ -54,7 +54,7 @@ function Title({ className = "", ...props }: TitleProps) {
 function Description({ className = "", ...props }: DescriptionProps) {
   return (
     <BaseDialog.Description
-      className={cn("text-neutral-400 mb-4", className)}
+      className={cn("mb-4 text-neutral-400", className)}
       {...props}
     />
   );
@@ -64,7 +64,7 @@ function Close({ className = "", ...props }: CloseProps) {
   return (
     <BaseDialog.Close
       className={cn(
-        "rounded-lg px-4 py-2 bg-purple-600 hover:bg-purple-700 transition-colors",
+        "rounded-lg bg-purple-600 px-4 py-2 transition-colors hover:bg-purple-700",
         className,
       )}
       {...props}

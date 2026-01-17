@@ -14,7 +14,7 @@ function Root({ className = "", ...props }: RootProps) {
 function Label({ className = "", ...props }: LabelProps) {
   return (
     <BaseField.Label
-      className={cn("block text-sm mb-1", className)}
+      className={cn("mb-1 block text-sm", className)}
       {...props}
     />
   );
@@ -23,7 +23,7 @@ function Label({ className = "", ...props }: LabelProps) {
 function Error({ className = "", ...props }: ErrorProps) {
   return (
     <BaseField.Error
-      className={cn("text-red-500 text-sm mt-1", className)}
+      className={cn("mt-1 text-sm text-red-500", className)}
       {...props}
     />
   );
@@ -32,7 +32,7 @@ function Error({ className = "", ...props }: ErrorProps) {
 function Description({ className = "", ...props }: DescriptionProps) {
   return (
     <BaseField.Description
-      className={cn("text-neutral-400 text-sm mt-1", className)}
+      className={cn("mt-1 text-sm text-neutral-400", className)}
       {...props}
     />
   );

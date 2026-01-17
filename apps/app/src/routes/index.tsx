@@ -1,12 +1,12 @@
-import { useState } from "react";
+import viteLogo from "/vite.svg";
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import { Button } from "@repo/ui/button";
+import { Card } from "@repo/ui/card";
 import { Dialog } from "@repo/ui/dialog";
 import { Field } from "@repo/ui/field";
 import { Input } from "@repo/ui/input";
-import { Card } from "@repo/ui/card";
 import reactLogo from "../assets/react.svg";
-import viteLogo from "/vite.svg";
 
 export const Route = createFileRoute("/")({
   component: HomeComponent,
@@ -40,8 +40,8 @@ export function HomeComponent() {
   const [count, setCount] = useState(0);
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-8">
-      <div className="flex gap-8 mb-8">
+    <main className="flex min-h-screen flex-col items-center justify-center p-8">
+      <div className="mb-8 flex gap-8">
         <a href="https://vite.dev" target="_blank" rel="noreferrer">
           <img
             src={viteLogo}
@@ -58,9 +58,9 @@ export function HomeComponent() {
         </a>
       </div>
 
-      <h1 className="text-5xl font-bold mb-8">Vite + React</h1>
+      <h1 className="mb-8 text-5xl font-bold">Vite + React</h1>
 
-      <div className="p-8 mb-8 flex flex-col items-center gap-4">
+      <div className="mb-8 flex flex-col items-center gap-4 p-8">
         <Button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </Button>
@@ -85,14 +85,14 @@ export function HomeComponent() {
 
         <p className="mt-4 text-neutral-400">
           Edit{" "}
-          <code className="font-mono bg-neutral-800 px-2 py-1 rounded">
+          <code className="rounded bg-neutral-800 px-2 py-1 font-mono">
             src/App.tsx
           </code>{" "}
           and save to test HMR
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-4 gap-4 max-w-5xl text-center lg:text-left">
+      <div className="grid max-w-5xl gap-4 text-center lg:grid-cols-4 lg:text-left">
         {LINKS.map(({ title, href, description }) => (
           <Card href={href} key={title} title={title}>
             {description}

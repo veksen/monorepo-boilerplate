@@ -7,5 +7,5 @@ export const uiConfig = mergeConfig(
     test: {
       environment: "jsdom",
     },
-  })
+  }),
 );

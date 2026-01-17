@@ -8,14 +8,14 @@ export const Route = createFileRoute("/components")({
 function ComponentsPage() {
   return (
     <main className="p-8">
-      <h1 className="text-3xl font-bold mb-8">Components</h1>
+      <h1 className="mb-8 text-3xl font-bold">Components</h1>
 
       <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-4">Button</h2>
+        <h2 className="mb-4 text-xl font-semibold">Button</h2>
 
         <div className="space-y-4">
           <div>
-            <h3 className="text-sm text-neutral-400 mb-2">Primary</h3>
+            <h3 className="mb-2 text-sm text-neutral-400">Primary</h3>
             <div className="flex flex-wrap items-center gap-2">
               <Button variant="primary" size="sm">
                 Small
@@ -30,7 +30,7 @@ function ComponentsPage() {
           </div>
 
           <div>
-            <h3 className="text-sm text-neutral-400 mb-2">Secondary</h3>
+            <h3 className="mb-2 text-sm text-neutral-400">Secondary</h3>
             <div className="flex flex-wrap items-center gap-2">
               <Button variant="secondary" size="sm">
                 Small
@@ -45,7 +45,7 @@ function ComponentsPage() {
           </div>
 
           <div>
-            <h3 className="text-sm text-neutral-400 mb-2">Ghost</h3>
+            <h3 className="mb-2 text-sm text-neutral-400">Ghost</h3>
             <div className="flex flex-wrap items-center gap-2">
               <Button variant="ghost" size="sm">
                 Small

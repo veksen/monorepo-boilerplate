@@ -6,9 +6,9 @@ export const Route = createFileRoute("/about")({
 
 function AboutComponent() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-8">
-      <h1 className="text-5xl font-bold mb-8">About</h1>
-      <p className="text-neutral-400 max-w-xl text-center">
+    <main className="flex min-h-screen flex-col items-center justify-center p-8">
+      <h1 className="mb-8 text-5xl font-bold">About</h1>
+      <p className="max-w-xl text-center text-neutral-400">
         This is a monorepo boilerplate using Turborepo, Vite, React, and
         TanStack Router with file-based routing.
       </p>
