@@ -8,7 +8,6 @@ This Turborepo includes the following packages/apps:
 
 - `app`: a [Vite](https://vite.dev/) + React app with [Tailwind CSS](https://tailwindcss.com/)
 - `@repo/ui`: a React component library with [Base UI](https://base-ui.com/) and [Tailwind CSS](https://tailwindcss.com/) shared by apps
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-prettier`)
 - `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
 - `@repo/tailwind-config`: shared Tailwind CSS configuration
 - `@repo/vitest-config`: shared Vitest configuration
@@ -45,6 +44,6 @@ This Turborepo has some additional tools already setup for you:
 - [Base UI](https://base-ui.com/) for unstyled, accessible components
 - [Tailwind CSS](https://tailwindcss.com/) for styles
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+- [OxLint](https://oxc.rs/docs/guide/usage/linter) for code linting
+- [OxFmt](https://oxc.rs/docs/guide/usage/formatter) for code formatting
 - [Vitest](https://vitest.dev/) for testing
