@@ -14,7 +14,18 @@
     "functions": ["clsx", "cn", "tailwind-merge"],
   },
   "experimentalSortImports": {
-    "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+    "customGroups": [
+      { "elementNamePattern": ["react", "react-*"], "groupName": "react" },
+    ],
+    "groups": [
+      "builtin",
+      "react",
+      "external",
+      "internal",
+      "parent",
+      "sibling",
+      "index",
+    ],
     "internalPattern": ["@repo/", "@/", "~/"],
     "newlinesBetween": false,
     "order": "asc",
