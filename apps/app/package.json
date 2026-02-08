@@ -18,7 +18,7 @@
     "@tanstack/react-router": "^1.158.4",
     "@tanstack/react-router-devtools": "^1.158.4",
     "react": "^19.2.4",
-    "react-dom": "^19.2.3"
+    "react-dom": "^19.2.4"
   },
   "devDependencies": {
     "@repo/tailwind-config": "*",
