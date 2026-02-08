@@ -1,5 +1,5 @@
-import { Field as BaseField } from "@base-ui/react/field";
 import { type ComponentProps } from "react";
+import { Field as BaseField } from "@base-ui/react/field";
 import { cn } from "../utils.js";
 
 type RootProps = ComponentProps<typeof BaseField.Root>;

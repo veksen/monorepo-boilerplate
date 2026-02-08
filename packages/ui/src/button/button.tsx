@@ -1,6 +1,6 @@
+import { type ComponentProps } from "react";
 import { Button as BaseButton } from "@base-ui/react/button";
 import { cva, type VariantProps } from "cva";
-import { type ComponentProps } from "react";
 import { cn } from "../utils.js";
 
 const buttonVariants = cva({

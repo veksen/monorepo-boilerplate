@@ -1,5 +1,5 @@
-import { Dialog as BaseDialog } from "@base-ui/react/dialog";
 import { type ComponentProps } from "react";
+import { Dialog as BaseDialog } from "@base-ui/react/dialog";
 import { cn } from "../utils.js";
 
 type TriggerProps = ComponentProps<typeof BaseDialog.Trigger>;
