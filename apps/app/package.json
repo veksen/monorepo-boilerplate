@@ -15,7 +15,7 @@
     "@fontsource/geist-mono": "^5.2.7",
     "@fontsource/geist-sans": "^5.2.5",
     "@repo/ui": "*",
-    "@tanstack/react-router": "^1.151.3",
+    "@tanstack/react-router": "^1.158.4",
     "@tanstack/react-router-devtools": "^1.151.3",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
